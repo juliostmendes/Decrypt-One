@@ -4,16 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decrypt One</title>
-    <script src="/main.js"></script>
+    <script src="/main.js" defer></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="/assets/Vector.svg">
-    </header>
     <main>
-        <section class="text-input"></section>
-        <section class="text-output"></section>
+        <section class="text-input">
+            <textarea class="text-input__textbox" placeholder="Digite seu texto"></textarea>
+            <label>Apenas letras minúsculas e sem acento.</label>
+            <div class="text-input__buttons">
+                <button class="btn-primary" id="encryptButton">&#128274; Criptografar</button>
+                <button class="btn-secondary" id="decryptButton">&#128273; Descriptografar</button>
+                <button class="btn-secondary" id="clearInputButton">&#129529; Limpar Entrada</button>
+            </div>
+        </section>
+        <section class="text-output">
+            <textarea class="text-output__textbox" readonly></textarea>
+            <div class="text-output__buttons">
+                <button class="btn-secondary" id="copyButton">&#128203; Copiar</button>
+                <button class="btn-secondary" id="clearOutputButton">&#129529; Limpar Saída</button>
+            </div>
+        </section>
     </main>
 </body>
 </html>

@@ -1,4 +1,98 @@
+/* Definindo variáveis para as cores */
+:root {
+    --background-color: #000;
+    --primary-color: #007bff;
+    --primary-color-hover: #0056b3;
+    --secondary-color: #6c757d;
+    --secondary-color-hover: #5a6268;
+    --text-color: #fff;
+    --input-background-color: #333;
+    --input-border-color: #444;
+    --label-color: #aaa;
+}
+
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding-top: 5%;
+}
+
+.text-input, .text-output {
+    background-color: var(--input-background-color);
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.text-input__textbox, .text-output__textbox {
+    width: calc(100% - 22px);
+    padding: 15px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 15px;
+    min-height: 200px;
+    box-sizing: border-box;
+    resize: vertical; 
+    overflow: auto;
+    background-color: var(--input-background-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
+    color: var(--text-color);
+    transition: background-color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-color-hover);
+}
+
+.text-input label {
+    display: block;
+    margin-top: 10px;
+    color: var(--label-color);
+}
+
+.text-input__buttons, .text-output__buttons {
+    margin-top: 10px;
+}
+
+.text-output__buttons {
+    display: flex;
+    justify-content: space-between;
 }
